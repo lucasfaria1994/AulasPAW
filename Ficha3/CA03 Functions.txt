@@ -1,0 +1,34 @@
+let orderCount = 0;
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+    console.log(`Order: ${crustType} pizza topped with ${topping}`);
+};
+
+const getSubTotal = (itemCount) => {
+  return itemCount * 7.5;
+};
+
+const getTax = (orderCount) => {
+  return getSubTotal(orderCount) * 0.06
+}
+
+const getTotal = () => {
+  return getTax(orderCount) + getSubTotal(orderCount)
+}
+
+takeOrder('mushrooms', 'thin');
+takeOrder('mushrooms', 'thick');
+takeOrder('mushrooms', 'juicy');
+console.log(getSubTotal(orderCount));
+console.log(getTotal());
+
+const isGreaterThan = (numberOne, numberTwo) => {
+  if(numberOne > numberTwo){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+isGreaterThan(1,2);
